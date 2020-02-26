@@ -1,0 +1,10 @@
+defines = -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_GNU_SOURCE -DCR_CLANG_REVISION=\"n340759-eaabaf7e-1\" -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D_DEBUG -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DDYNAMIC_ANNOTATIONS_PREFIX=NACL_
+include_dirs = -I../../native_client/src/public/linux_syscalls -I../.. -Inewlib_pnacl_nonsfi/gen
+label_name = native_widget_types
+root_out_dir = newlib_pnacl_nonsfi
+target_out_dir = newlib_pnacl_nonsfi/obj/ui/gfx
+target_output_name = native_widget_types
+
+build newlib_pnacl_nonsfi/obj/ui/gfx/native_widget_types.inputdeps.stamp: newlib_pnacl_nonsfi_stamp newlib_pnacl_nonsfi/obj/base/anchor_functions_buildflags.stamp newlib_pnacl_nonsfi/obj/base/build_date.stamp newlib_pnacl_nonsfi/obj/base/cfi_buildflags.stamp newlib_pnacl_nonsfi/obj/base/clang_coverage_buildflags.stamp newlib_pnacl_nonsfi/obj/base/debugging_buildflags.stamp newlib_pnacl_nonsfi/obj/base/logging_buildflags.stamp newlib_pnacl_nonsfi/obj/base/orderfile_buildflags.stamp newlib_pnacl_nonsfi/obj/base/partition_alloc_buildflags.stamp newlib_pnacl_nonsfi/obj/base/sanitizer_buildflags.stamp newlib_pnacl_nonsfi/obj/base/synchronization_buildflags.stamp newlib_pnacl_nonsfi/obj/base/allocator/buildflags.stamp newlib_pnacl_nonsfi/obj/build/branding_buildflags.stamp
+
+build newlib_pnacl_nonsfi/obj/ui/gfx/native_widget_types.stamp: newlib_pnacl_nonsfi_stamp || newlib_pnacl_nonsfi/obj/ui/gfx/gfx_export.stamp newlib_pnacl_nonsfi/obj/base/libbase.a newlib_pnacl_nonsfi/obj/base/libbase_static.a newlib_pnacl_nonsfi/obj/base/numerics/base_numerics.stamp newlib_pnacl_nonsfi/obj/base/third_party/double_conversion/libdouble_conversion.a newlib_pnacl_nonsfi/obj/base/third_party/dynamic_annotations/dynamic_annotations.stamp newlib_pnacl_nonsfi/obj/third_party/modp_b64/libmodp_b64.a newlib_pnacl_nonsfi/obj/base/third_party/libevent/libevent.a

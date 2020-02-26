@@ -1,0 +1,5 @@
+irt_x64/gen/gpu/ipc/common/interfaces.sources_list
+irt_x64/gen/gpu/ipc/common/gpu_preferences_interface.sources_list
+irt_x64/gen/mojo/public/mojom/base/base.sources_list
+irt_x64/gen/ui/gfx/geometry/mojom/mojom.sources_list
+irt_x64/gen/ui/gfx/mojom/mojom.sources_list

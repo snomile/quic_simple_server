@@ -1,0 +1,9 @@
+defines = -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_GNU_SOURCE -DCR_CLANG_REVISION=\"n340759-eaabaf7e-1\" -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D_DEBUG -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DDYNAMIC_ANNOTATIONS_PREFIX=NACL_
+include_dirs = -I../.. -Iirt_x64/gen -I../../third_party/khronos -I../../gpu
+label_name = interface_base
+root_out_dir = irt_x64
+target_out_dir = irt_x64/obj/gpu/command_buffer/client
+target_output_name = interface_base
+
+
+build irt_x64/obj/gpu/command_buffer/client/interface_base.stamp: irt_x64_stamp || irt_x64/obj/base/libbase.a irt_x64/obj/base/libbase_static.a irt_x64/obj/base/numerics/base_numerics.stamp irt_x64/obj/base/third_party/double_conversion/libdouble_conversion.a irt_x64/obj/base/third_party/dynamic_annotations/dynamic_annotations.stamp irt_x64/obj/third_party/modp_b64/libmodp_b64.a

@@ -1,0 +1,30 @@
+defines = -DCPU_NO_SIMD -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_GNU_SOURCE -DCR_CLANG_REVISION=\"n340759-eaabaf7e-1\" -D_DEBUG -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DDYNAMIC_ANNOTATIONS_PREFIX=NACL_ -DZLIB_IMPLEMENTATION
+include_dirs = -I../../native_client/src/public/linux_syscalls -I../.. -Inewlib_pnacl_nonsfi/gen -I../../third_party/zlib
+cflags = -fno-strict-aliasing -fcolor-diagnostics -fmerge-all-constants -U__STRICT_ANSI__ --pnacl-allow-translate -arch x86-32-nonsfi --pnacl-bias=x86-32-nonsfi --target=i686-unknown-nacl -Wno-builtin-macro-redefined -D__DATE__= -D__TIME__= -D__TIMESTAMP__= -Xclang -fdebug-compilation-dir -Xclang . -O0 -fno-omit-frame-pointer -g2 -fvisibility=hidden -Werror -Wno-unused-variable -Wno-missing-field-initializers -Wno-unused-parameter -Wno-c++11-narrowing -Wno-unneeded-internal-declaration
+cflags_c = -std=c11
+label_name = zlib
+root_out_dir = newlib_pnacl_nonsfi
+target_out_dir = newlib_pnacl_nonsfi/obj/third_party/zlib
+target_output_name = libchrome_zlib
+
+build newlib_pnacl_nonsfi/obj/third_party/zlib/zlib/adler32.o: newlib_pnacl_nonsfi_cc ../../third_party/zlib/adler32.c
+build newlib_pnacl_nonsfi/obj/third_party/zlib/zlib/compress.o: newlib_pnacl_nonsfi_cc ../../third_party/zlib/compress.c
+build newlib_pnacl_nonsfi/obj/third_party/zlib/zlib/cpu_features.o: newlib_pnacl_nonsfi_cc ../../third_party/zlib/cpu_features.c
+build newlib_pnacl_nonsfi/obj/third_party/zlib/zlib/crc32.o: newlib_pnacl_nonsfi_cc ../../third_party/zlib/crc32.c
+build newlib_pnacl_nonsfi/obj/third_party/zlib/zlib/deflate.o: newlib_pnacl_nonsfi_cc ../../third_party/zlib/deflate.c
+build newlib_pnacl_nonsfi/obj/third_party/zlib/zlib/gzclose.o: newlib_pnacl_nonsfi_cc ../../third_party/zlib/gzclose.c
+build newlib_pnacl_nonsfi/obj/third_party/zlib/zlib/gzlib.o: newlib_pnacl_nonsfi_cc ../../third_party/zlib/gzlib.c
+build newlib_pnacl_nonsfi/obj/third_party/zlib/zlib/gzread.o: newlib_pnacl_nonsfi_cc ../../third_party/zlib/gzread.c
+build newlib_pnacl_nonsfi/obj/third_party/zlib/zlib/gzwrite.o: newlib_pnacl_nonsfi_cc ../../third_party/zlib/gzwrite.c
+build newlib_pnacl_nonsfi/obj/third_party/zlib/zlib/infback.o: newlib_pnacl_nonsfi_cc ../../third_party/zlib/infback.c
+build newlib_pnacl_nonsfi/obj/third_party/zlib/zlib/inffast.o: newlib_pnacl_nonsfi_cc ../../third_party/zlib/inffast.c
+build newlib_pnacl_nonsfi/obj/third_party/zlib/zlib/inftrees.o: newlib_pnacl_nonsfi_cc ../../third_party/zlib/inftrees.c
+build newlib_pnacl_nonsfi/obj/third_party/zlib/zlib/trees.o: newlib_pnacl_nonsfi_cc ../../third_party/zlib/trees.c
+build newlib_pnacl_nonsfi/obj/third_party/zlib/zlib/uncompr.o: newlib_pnacl_nonsfi_cc ../../third_party/zlib/uncompr.c
+build newlib_pnacl_nonsfi/obj/third_party/zlib/zlib/zutil.o: newlib_pnacl_nonsfi_cc ../../third_party/zlib/zutil.c
+build newlib_pnacl_nonsfi/obj/third_party/zlib/zlib/inflate.o: newlib_pnacl_nonsfi_cc ../../third_party/zlib/inflate.c
+
+build newlib_pnacl_nonsfi/obj/third_party/zlib/libchrome_zlib.a: newlib_pnacl_nonsfi_alink newlib_pnacl_nonsfi/obj/third_party/zlib/zlib/adler32.o newlib_pnacl_nonsfi/obj/third_party/zlib/zlib/compress.o newlib_pnacl_nonsfi/obj/third_party/zlib/zlib/cpu_features.o newlib_pnacl_nonsfi/obj/third_party/zlib/zlib/crc32.o newlib_pnacl_nonsfi/obj/third_party/zlib/zlib/deflate.o newlib_pnacl_nonsfi/obj/third_party/zlib/zlib/gzclose.o newlib_pnacl_nonsfi/obj/third_party/zlib/zlib/gzlib.o newlib_pnacl_nonsfi/obj/third_party/zlib/zlib/gzread.o newlib_pnacl_nonsfi/obj/third_party/zlib/zlib/gzwrite.o newlib_pnacl_nonsfi/obj/third_party/zlib/zlib/infback.o newlib_pnacl_nonsfi/obj/third_party/zlib/zlib/inffast.o newlib_pnacl_nonsfi/obj/third_party/zlib/zlib/inftrees.o newlib_pnacl_nonsfi/obj/third_party/zlib/zlib/trees.o newlib_pnacl_nonsfi/obj/third_party/zlib/zlib/uncompr.o newlib_pnacl_nonsfi/obj/third_party/zlib/zlib/zutil.o newlib_pnacl_nonsfi/obj/third_party/zlib/zlib/inflate.o || newlib_pnacl_nonsfi/obj/third_party/zlib/zlib_x86_simd.stamp
+  arflags =
+  output_extension = .a
+  output_dir = newlib_pnacl_nonsfi/obj/third_party/zlib

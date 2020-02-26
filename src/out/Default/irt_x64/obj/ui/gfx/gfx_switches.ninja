@@ -1,0 +1,16 @@
+defines = -DGFX_SWITCHES_IMPLEMENTATION -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_GNU_SOURCE -DCR_CLANG_REVISION=\"n340759-eaabaf7e-1\" -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D_DEBUG -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DDYNAMIC_ANNOTATIONS_PREFIX=NACL_
+include_dirs = -I../.. -Iirt_x64/gen
+cflags = -fno-strict-aliasing -fcolor-diagnostics -fmerge-all-constants -U__STRICT_ANSI__ -integrated-as -m64 -march=x86-64 -fasynchronous-unwind-tables -fomit-frame-pointer -Wno-builtin-macro-redefined -D__DATE__= -D__TIME__= -D__TIMESTAMP__= -Xclang -fdebug-compilation-dir -Xclang . -Wall -Werror -Wextra -Wimplicit-fallthrough -Wextra-semi -Wno-missing-field-initializers -Wno-unused-parameter -Wno-c++11-narrowing -Wno-unneeded-internal-declaration -Os -ffunction-sections -fdata-sections -fno-omit-frame-pointer -g2 -fvisibility=hidden
+cflags_cc = -Wno-undefined-bool-conversion -Wno-tautological-undefined-compare -std=c++14 -fno-exceptions -fno-rtti -fvisibility-inlines-hidden
+label_name = gfx_switches
+root_out_dir = irt_x64
+target_out_dir = irt_x64/obj/ui/gfx
+target_output_name = libgfx_switches
+
+build irt_x64/obj/ui/gfx/gfx_switches.inputdeps.stamp: irt_x64_stamp irt_x64/obj/base/anchor_functions_buildflags.stamp irt_x64/obj/base/build_date.stamp irt_x64/obj/base/cfi_buildflags.stamp irt_x64/obj/base/clang_coverage_buildflags.stamp irt_x64/obj/base/debugging_buildflags.stamp irt_x64/obj/base/logging_buildflags.stamp irt_x64/obj/base/orderfile_buildflags.stamp irt_x64/obj/base/partition_alloc_buildflags.stamp irt_x64/obj/base/sanitizer_buildflags.stamp irt_x64/obj/base/synchronization_buildflags.stamp irt_x64/obj/base/allocator/buildflags.stamp irt_x64/obj/build/branding_buildflags.stamp ./tls_edit
+build irt_x64/obj/ui/gfx/gfx_switches/switches.o: irt_x64_cxx ../../ui/gfx/switches.cc || irt_x64/obj/ui/gfx/gfx_switches.inputdeps.stamp
+
+build irt_x64/obj/ui/gfx/libgfx_switches.a: irt_x64_alink irt_x64/obj/ui/gfx/gfx_switches/switches.o || irt_x64/obj/base/libbase.a irt_x64/obj/base/libbase_static.a irt_x64/obj/base/numerics/base_numerics.stamp irt_x64/obj/base/third_party/double_conversion/libdouble_conversion.a irt_x64/obj/base/third_party/dynamic_annotations/dynamic_annotations.stamp irt_x64/obj/third_party/modp_b64/libmodp_b64.a
+  arflags =
+  output_extension = .a
+  output_dir = irt_x64/obj/ui/gfx

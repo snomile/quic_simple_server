@@ -1,0 +1,3 @@
+newlib_pnacl_nonsfi/gen/gpu/ipc/common/gpu_preferences_interface.sources_list
+newlib_pnacl_nonsfi/gen/mojo/public/mojom/base/base.sources_list
+newlib_pnacl_nonsfi/gen/ui/gfx/mojom/mojom.sources_list

@@ -1,0 +1,4 @@
+newlib_pnacl_nonsfi/gen/content/public/common/client_hints_mojom.sources_list
+newlib_pnacl_nonsfi/gen/mojo/public/mojom/base/base.sources_list
+newlib_pnacl_nonsfi/gen/third_party/blink/public/mojom/web_client_hints_types_mojo_bindings.sources_list
+newlib_pnacl_nonsfi/gen/url/mojom/url_mojom_origin.sources_list

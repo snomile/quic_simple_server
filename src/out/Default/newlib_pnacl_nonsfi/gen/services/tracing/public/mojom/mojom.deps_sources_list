@@ -1,0 +1,2 @@
+newlib_pnacl_nonsfi/gen/services/tracing/public/mojom/mojom.sources_list
+newlib_pnacl_nonsfi/gen/mojo/public/mojom/base/base.sources_list

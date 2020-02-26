@@ -1,0 +1,17 @@
+defines = -DGFX_RANGE_IMPLEMENTATION -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_GNU_SOURCE -DCR_CLANG_REVISION=\"n340759-eaabaf7e-1\" -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D_DEBUG -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DDYNAMIC_ANNOTATIONS_PREFIX=NACL_
+include_dirs = -I../../native_client/src/public/linux_syscalls -I../.. -Inewlib_pnacl_nonsfi/gen
+cflags = -fno-strict-aliasing -fcolor-diagnostics -fmerge-all-constants -U__STRICT_ANSI__ --pnacl-allow-translate -arch x86-32-nonsfi --pnacl-bias=x86-32-nonsfi --target=i686-unknown-nacl -Wno-builtin-macro-redefined -D__DATE__= -D__TIME__= -D__TIMESTAMP__= -Xclang -fdebug-compilation-dir -Xclang . -Wall -Werror -Wextra -Wimplicit-fallthrough -Wextra-semi -Wno-missing-field-initializers -Wno-unused-parameter -Wno-c++11-narrowing -Wno-unneeded-internal-declaration -O0 -fno-omit-frame-pointer -g2 -fvisibility=hidden
+cflags_cc = -Wno-undefined-bool-conversion -Wno-tautological-undefined-compare -std=c++14 -fno-exceptions -fno-rtti -fvisibility-inlines-hidden
+label_name = range
+root_out_dir = newlib_pnacl_nonsfi
+target_out_dir = newlib_pnacl_nonsfi/obj/ui/gfx/range
+target_output_name = librange
+
+build newlib_pnacl_nonsfi/obj/ui/gfx/range/range.inputdeps.stamp: newlib_pnacl_nonsfi_stamp newlib_pnacl_nonsfi/obj/base/anchor_functions_buildflags.stamp newlib_pnacl_nonsfi/obj/base/build_date.stamp newlib_pnacl_nonsfi/obj/base/cfi_buildflags.stamp newlib_pnacl_nonsfi/obj/base/clang_coverage_buildflags.stamp newlib_pnacl_nonsfi/obj/base/debugging_buildflags.stamp newlib_pnacl_nonsfi/obj/base/logging_buildflags.stamp newlib_pnacl_nonsfi/obj/base/orderfile_buildflags.stamp newlib_pnacl_nonsfi/obj/base/partition_alloc_buildflags.stamp newlib_pnacl_nonsfi/obj/base/sanitizer_buildflags.stamp newlib_pnacl_nonsfi/obj/base/synchronization_buildflags.stamp newlib_pnacl_nonsfi/obj/base/allocator/buildflags.stamp newlib_pnacl_nonsfi/obj/build/branding_buildflags.stamp
+build newlib_pnacl_nonsfi/obj/ui/gfx/range/range/range.o: newlib_pnacl_nonsfi_cxx ../../ui/gfx/range/range.cc || newlib_pnacl_nonsfi/obj/ui/gfx/range/range.inputdeps.stamp
+build newlib_pnacl_nonsfi/obj/ui/gfx/range/range/range_f.o: newlib_pnacl_nonsfi_cxx ../../ui/gfx/range/range_f.cc || newlib_pnacl_nonsfi/obj/ui/gfx/range/range.inputdeps.stamp
+
+build newlib_pnacl_nonsfi/obj/ui/gfx/range/librange.a: newlib_pnacl_nonsfi_alink newlib_pnacl_nonsfi/obj/ui/gfx/range/range/range.o newlib_pnacl_nonsfi/obj/ui/gfx/range/range/range_f.o || newlib_pnacl_nonsfi/obj/base/libbase.a newlib_pnacl_nonsfi/obj/ui/gfx/gfx_export.stamp newlib_pnacl_nonsfi/obj/base/libbase_static.a newlib_pnacl_nonsfi/obj/base/numerics/base_numerics.stamp newlib_pnacl_nonsfi/obj/base/third_party/double_conversion/libdouble_conversion.a newlib_pnacl_nonsfi/obj/base/third_party/dynamic_annotations/dynamic_annotations.stamp newlib_pnacl_nonsfi/obj/third_party/modp_b64/libmodp_b64.a newlib_pnacl_nonsfi/obj/base/third_party/libevent/libevent.a
+  arflags =
+  output_extension = .a
+  output_dir = newlib_pnacl_nonsfi/obj/ui/gfx/range

@@ -1,0 +1,20 @@
+defines = -DIS_MOJO_CPP_PLATFORM_IMPL -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_GNU_SOURCE -DCR_CLANG_REVISION=\"n340759-eaabaf7e-1\" -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D_DEBUG -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DDYNAMIC_ANNOTATIONS_PREFIX=NACL_
+include_dirs = -I../.. -Iclang_newlib_x64/gen
+cflags = -fno-strict-aliasing -fcolor-diagnostics -fmerge-all-constants -U__STRICT_ANSI__ -integrated-as -m64 -march=x86-64 -Wno-builtin-macro-redefined -D__DATE__= -D__TIME__= -D__TIMESTAMP__= -Xclang -fdebug-compilation-dir -Xclang . -Wall -Werror -Wextra -Wimplicit-fallthrough -Wextra-semi -Wno-missing-field-initializers -Wno-unused-parameter -Wno-c++11-narrowing -Wno-unneeded-internal-declaration -O0 -fno-omit-frame-pointer -g2 -fvisibility=hidden
+cflags_cc = -Wno-undefined-bool-conversion -Wno-tautological-undefined-compare -std=c++14 -fno-exceptions -fno-rtti -fvisibility-inlines-hidden
+label_name = platform
+root_out_dir = clang_newlib_x64
+target_out_dir = clang_newlib_x64/obj/mojo/public/cpp/platform
+target_output_name = libmojo_cpp_platform
+
+build clang_newlib_x64/obj/mojo/public/cpp/platform/platform.inputdeps.stamp: clang_newlib_x64_stamp clang_newlib_x64/obj/base/anchor_functions_buildflags.stamp clang_newlib_x64/obj/base/build_date.stamp clang_newlib_x64/obj/base/cfi_buildflags.stamp clang_newlib_x64/obj/base/clang_coverage_buildflags.stamp clang_newlib_x64/obj/base/debugging_buildflags.stamp clang_newlib_x64/obj/base/logging_buildflags.stamp clang_newlib_x64/obj/base/orderfile_buildflags.stamp clang_newlib_x64/obj/base/partition_alloc_buildflags.stamp clang_newlib_x64/obj/base/sanitizer_buildflags.stamp clang_newlib_x64/obj/base/synchronization_buildflags.stamp clang_newlib_x64/obj/base/allocator/buildflags.stamp clang_newlib_x64/obj/build/branding_buildflags.stamp
+build clang_newlib_x64/obj/mojo/public/cpp/platform/platform/platform_channel.o: clang_newlib_x64_cxx ../../mojo/public/cpp/platform/platform_channel.cc || clang_newlib_x64/obj/mojo/public/cpp/platform/platform.inputdeps.stamp
+build clang_newlib_x64/obj/mojo/public/cpp/platform/platform/platform_channel_endpoint.o: clang_newlib_x64_cxx ../../mojo/public/cpp/platform/platform_channel_endpoint.cc || clang_newlib_x64/obj/mojo/public/cpp/platform/platform.inputdeps.stamp
+build clang_newlib_x64/obj/mojo/public/cpp/platform/platform/platform_channel_server_endpoint.o: clang_newlib_x64_cxx ../../mojo/public/cpp/platform/platform_channel_server_endpoint.cc || clang_newlib_x64/obj/mojo/public/cpp/platform/platform.inputdeps.stamp
+build clang_newlib_x64/obj/mojo/public/cpp/platform/platform/platform_handle.o: clang_newlib_x64_cxx ../../mojo/public/cpp/platform/platform_handle.cc || clang_newlib_x64/obj/mojo/public/cpp/platform/platform.inputdeps.stamp
+build clang_newlib_x64/obj/mojo/public/cpp/platform/platform/named_platform_channel.o: clang_newlib_x64_cxx ../../mojo/public/cpp/platform/named_platform_channel.cc || clang_newlib_x64/obj/mojo/public/cpp/platform/platform.inputdeps.stamp
+
+build clang_newlib_x64/obj/mojo/public/cpp/platform/libmojo_cpp_platform.a: clang_newlib_x64_alink clang_newlib_x64/obj/mojo/public/cpp/platform/platform/platform_channel.o clang_newlib_x64/obj/mojo/public/cpp/platform/platform/platform_channel_endpoint.o clang_newlib_x64/obj/mojo/public/cpp/platform/platform/platform_channel_server_endpoint.o clang_newlib_x64/obj/mojo/public/cpp/platform/platform/platform_handle.o clang_newlib_x64/obj/mojo/public/cpp/platform/platform/named_platform_channel.o || clang_newlib_x64/obj/base/libbase.a clang_newlib_x64/obj/mojo/public/c/system/headers.stamp clang_newlib_x64/obj/base/libbase_static.a clang_newlib_x64/obj/base/numerics/base_numerics.stamp clang_newlib_x64/obj/base/third_party/double_conversion/libdouble_conversion.a clang_newlib_x64/obj/base/third_party/dynamic_annotations/dynamic_annotations.stamp clang_newlib_x64/obj/third_party/modp_b64/libmodp_b64.a
+  arflags =
+  output_extension = .a
+  output_dir = clang_newlib_x64/obj/mojo/public/cpp/platform
