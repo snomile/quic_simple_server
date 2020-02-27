@@ -52,7 +52,6 @@ QuicSimpleServerSession::~QuicSimpleServerSession() {
 
 
 base::FilePath QuicSimpleServerSession::getNetLogName(){
-   //time
     time_t nowtime;
     nowtime = time(NULL); //获取日历时间
     struct tm *local;
@@ -71,7 +70,7 @@ base::FilePath QuicSimpleServerSession::getNetLogName(){
 
 
 void QuicSimpleServerSession::setConnectionLogger(){
-    //net::NetLog* net_log = net::NetLog::Get();  //如果使用单例的netlog，会使得不同connection的net_log_file_observer_被加入到同一个netlog中，导致重复记录日志
+    //net::NetLog* net_log = net::NetLog::Get();  //如果使用单例的netlog，会使不同connection的net_log_file_observer_被加入到同一个netlog中，导致重复记录日志
     net::NetLog* net_log = new net::NetLog(0);
     netlogWithSource = net::NetLogWithSource::Make(net_log, net::NetLogSourceType::QUIC_SESSION);
 
@@ -99,30 +98,13 @@ void QuicSimpleServerSession::OnCryptoHandshakeMessageReceived(
 }
  
 void QuicSimpleServerSession::OnHeaderList(const QuicHeaderList& header_list) {
-  
-
-  /*
-  logger_.AddEvent(
-      NetLogEventType::HTTP_TRANSACTION_READ_HEADERS,   //BIDIRECTIONAL_STREAM_RECV_HEADERS
-      "headers", "Received header list for stream " << stream_id_ << ": " << header_list.DebugString() );
-
-
-  netlogWithSource.AddEvent(net::NetLogEventType::BIDIRECTIONAL_STREAM_RECV_HEADERS,
-                    [&](net::NetLogCaptureMode capture_mode) {
-                      return NetLogHeadersParams(&header_list,
-                                                  capture_mode);
-                    });
-  */
-
   netlogWithSource.AddEventWithStringParams(net::NetLogEventType::QUIC_SIMPLE_SERVER_SESSION_RECEIVED_HEADERS,
                                 "header",
                                 header_list.DebugString());
 
 
   QuicSpdySession::OnHeaderList(header_list);
-}                                
-
-
+}
 
 
 std::unique_ptr<QuicCryptoServerStreamBase>
