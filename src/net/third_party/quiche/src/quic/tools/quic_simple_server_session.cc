@@ -51,7 +51,7 @@ QuicSimpleServerSession::~QuicSimpleServerSession() {
 }
 
 
-base::FilePath QuicSimpleServerSession::getNetLogName(){
+base::FilePath QuicSimpleServerSession::getNetLogFilePath(){
     //time
     time_t nowtime;
     nowtime = time(NULL);  //获取日历时间
@@ -78,7 +78,7 @@ void QuicSimpleServerSession::setConnectionLogger(){
     connection()->set_debug_visitor(logger_);
     connection()->set_creator_debug_delegate(logger_);
 
-    base::FilePath file_path = getNetLogName();
+    base::FilePath file_path = getNetLogFilePath();
     net_log_file_observer_ = net::FileNetLogObserver::CreateUnbounded(file_path, /*constants=*/nullptr);
     net::NetLogCaptureMode capture_mode = net::NetLogCaptureMode::kDefault;
     net_log_file_observer_->StartObserving(net_log, capture_mode);
@@ -101,7 +101,6 @@ void QuicSimpleServerSession::OnHeaderList(const QuicHeaderList& header_list) {
   netlogWithSource.AddEventWithStringParams(net::NetLogEventType::QUIC_SIMPLE_SERVER_SESSION_RECEIVED_HEADERS,
                                 "header",
                                 header_list.DebugString());
-
 
   QuicSpdySession::OnHeaderList(header_list);
 }                                
