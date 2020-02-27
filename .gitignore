@@ -312,24 +312,20 @@ vs-chromium-project.txt
 
 # Ignore the default results output directory for tools/run-swarmed.py
 /results
-net/tools/quic/certs/out/*
-printing/backend/tools/ipp-registrations-2.csv
 
-
-
-*.o
-#src/out/Default/obj/*
 netlog*.json
 .AppleDouble
-src/chrome/test/data/xr/webvr_info/samples/media/textures/vr_bench_man.mp4
-src/out/Default/libnet.so
-src/third_party/angle/third_party/VK-GL-CTS/src/android/cts/master/vk-master.txt
-src/third_party/angle/third_party/VK-GL-CTS/src/external/vulkancts/mustpass/master/vk-default-no-waivers.txt
-src/third_party/angle/third_party/VK-GL-CTS/src/external/vulkancts/mustpass/master/vk-default.txt
-src/third_party/catapult/tracing/test_data/theverge_trace.json
+# src/chrome/test/data/xr/webvr_info/samples/media/textures/vr_bench_man.mp4
+# src/out/Default/libnet.so
+# src/third_party/angle/third_party/VK-GL-CTS/src/android/cts/master/vk-master.txt
+# src/third_party/angle/third_party/VK-GL-CTS/src/external/vulkancts/mustpass/master/vk-default-no-waivers.txt
+# src/third_party/angle/third_party/VK-GL-CTS/src/external/vulkancts/mustpass/master/vk-default.txt
+# src/third_party/catapult/tracing/test_data/theverge_trace.json
+
+#over 100MB
 src/third_party/instrumented_libraries/binaries/msan-chained-origins-trusty.tgz
 src/third_party/instrumented_libraries/binaries/msan-no-origins-trusty.tgz
 src/third_party/jdk/current/lib/modules
-src/third_party/jdk/extras/java_8/jre/lib/rt.jar
-src/third_party/llvm-build/Release+Asserts/bin/clang
-src/third_party/swiftshader/tests/regres/testlists/vk-master.txt
+
+# src/third_party/jdk/extras/java_8/jre/lib/rt.jar
+# src/third_party/swiftshader/tests/regres/testlists/vk-master.txt
