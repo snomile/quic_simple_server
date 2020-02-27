@@ -318,7 +318,8 @@ printing/backend/tools/ipp-registrations-2.csv
 
 
 *.o
-src/out/Default/obj/*
+#src/out/Default/obj/*
+netlog*.json
 .AppleDouble
 src/chrome/test/data/xr/webvr_info/samples/media/textures/vr_bench_man.mp4
 src/out/Default/libnet.so
